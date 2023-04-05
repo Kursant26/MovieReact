@@ -4,7 +4,6 @@ import {LanguageContext} from "../../context/RootContext";
 
 const MovieCard = ({el, id}) => {
     const {dark} = useContext(LanguageContext)
-    const {setDark} = useContext(LanguageContext)
     return (
         <div key={el.id} className="popular--card" style={{
             background: dark === true ? "white" : "black"

@@ -9,12 +9,12 @@ const Popular = () => {
     const [page, setPage] = useState(1)
     const {language} = useContext(LanguageContext)
     const {dark} = useContext(LanguageContext)
-    const {setDark} = useContext(LanguageContext)
+    // const {setDark} = useContext(LanguageContext)
     console.log(dark)
     console.log(language)
 
     const getPopular = (key) => {
-        // window.scroll(0,0)
+        window.scroll(0,0)
         axios(`https://api.themoviedb.org/3/movie/popular?api_key=${key}&language=${language}&page=${page}`)
             .then((res) => {
                 console.log(res.data.results)

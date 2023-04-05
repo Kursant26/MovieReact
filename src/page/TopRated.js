@@ -7,12 +7,13 @@ import {LanguageContext} from "../context/RootContext";
 const TopRated = () => {
     const [topRated, setTopRated] = useState([])
     const [active, setActive] = useState(1)
+    const {language} = useContext(LanguageContext)
     // const array = [1,2,3,4,5,6,7,8,9,10]
 
     const {dark} = useContext(LanguageContext)
     const getTopRated = (key) => {
-        // window.scroll(0,0)
-        axios(`https://api.themoviedb.org/3/movie/top_rated?api_key=${key}&language=ru-US&page=${active}`)
+        window.scroll(0,0)
+        axios(`https://api.themoviedb.org/3/movie/top_rated?api_key=${key}&language=${language}&page=${active}`)
             .then((res) => {
                 console.log(res.data.results)
                 setTopRated(res.data.results)
@@ -21,7 +22,7 @@ const TopRated = () => {
 
     useEffect(() => {
         getTopRated(API_KEY)
-    },     [active])
+    },     [active, language])
 
     return (
         <div id="topRated" style={{
