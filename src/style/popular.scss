@@ -1,0 +1,56 @@
+#popular {
+  padding: 80px 0;
+  h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .popular {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9rem;
+
+    &--card {
+      width: 25%;
+      border: 3px solid rgb(234, 0, 61, 0.64);
+      padding: 0 0 30px 0;
+      border-radius: 20px;
+      -webkit-box-shadow: 0 0 36px 24px rgba(229, 9, 20, 0.57);
+      -moz-box-shadow: 0 0 36px 24px rgba(229, 9, 20, 0.57);
+      box-shadow: 0 0 36px 24px rgba(229, 9, 20, 0.57);
+      transition: .4s;
+      background: white;
+      color: black;
+      img {
+        border-radius: 16px 16px 0 0;
+        width: 100%;
+      }
+      h2 {
+        margin-top: 20px;
+        text-align: center;
+      }
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+  .popular--page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    button {
+      width: 50px;
+      height: 50px;
+      border-radius: 3px;
+      color: white;
+      background: rgb(229, 9, 20);
+      margin: 0 20px;
+      cursor: pointer;
+    }
+    h2 {
+      color: white;
+    }
+  }
+}

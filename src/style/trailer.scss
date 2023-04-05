@@ -1,0 +1,11 @@
+#video {
+  background: white;
+  .video {
+    display: flex;
+    align-items: flex-start;
+    overflow-x: auto;
+    &--card {
+      margin: 20px 20px 20px 0;
+    }
+  }
+}
